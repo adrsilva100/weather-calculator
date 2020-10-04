@@ -1,9 +1,7 @@
 package com.mercadolivre.weather.controller;
 
-import com.mercadolivre.weather.dto.ClimateDays;
 import com.mercadolivre.weather.dto.ClimateDto;
 import com.mercadolivre.weather.dto.DaysDto;
-import com.mercadolivre.weather.entity.ClimateDay;
 import com.mercadolivre.weather.service.calculator.WheaterCalculatorService;
 import com.mercadolivre.weather.service.climate.ClimateService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,9 +24,9 @@ public class WheaterCalculatorController {
 
     @PostMapping(value = "/initialize")
     public ResponseEntity initializeDatabase() {
-        if(wheaterCalculatorService.calculateWheatersByDays(3650)){
+        if (wheaterCalculatorService.calculateWheatersByDays(3650)) {
             return ResponseEntity.ok().build();
-        }else{
+        } else {
             return ResponseEntity.unprocessableEntity().build();
         }
     }

@@ -1,10 +1,8 @@
 package com.mercadolivre.weather.dto;
 
 import lombok.Getter;
-import lombok.Setter;
 
 @Getter
-@Setter
 public class PlanetDto {
 
     private String name;
