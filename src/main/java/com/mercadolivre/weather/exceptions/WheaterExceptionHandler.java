@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 public class WheaterExceptionHandler {
 
     @ExceptionHandler(value = NotFoundClimateException.class)
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
     protected ResponseEntity handleNotFoundClimateException(final NotFoundClimateException ex) {
         return ResponseEntity.notFound().build();
     }
